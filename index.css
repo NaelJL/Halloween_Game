@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
+
+/* Corps de la page __________________________________________________________________*/
+
 body {
     background-image: url(./images/fond_ecran.jpg);
     background-size: cover;
@@ -12,6 +15,29 @@ body {
     color: white;
 }
 
+article {
+    display: flex;
+}
+
+#box_texte {
+    display: flex;
+    margin: 20px;
+}
+
+#box1 {
+    flex-shrink: 2;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.7em;
+    font-family: cursive;
+    text-shadow: 2px 2px black;
+    padding-top: 40px;
+}
+
+/* Liens ____________________________________________________________________________*/
+
 a {
     text-decoration: none;
     color: white;
@@ -22,30 +48,19 @@ a:hover {
     text-shadow: 1px 1px white;
 }
 
+
+/* Images ___________________________________________________________________________*/
+
 #img_araignee {
     width: 10%;
 }
 
 #img_sorciere {
     width: 50%;
-}
-
-#box_texte {
-    display: flex;
-    margin: 20px;
-}
-
-article {
-    display: flex;
+    height: 50%;
+    flex-grow: 2;
 }
 
 .porte {
     width: 80%;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.7em;
-    font-family: cursive;
-    text-shadow: 2px 2px black;
 }
