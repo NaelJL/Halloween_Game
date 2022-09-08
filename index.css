@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body {
+    background-image: url(./images/fond_ecran.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Shadows Into Light', 'Gloria Hallelujah', cursive;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+
+a:hover {
+    text-shadow: 1px 1px white;
+}
+
+#img_araignee {
+    width: 10%;
+}
+
+#img_sorciere {
+    width: 50%;
+}
+
+#box_texte {
+    display: flex;
+    margin: 20px;
+}
+
+article {
+    display: flex;
+}
+
+.porte {
+    width: 80%;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.7em;
+    font-family: cursive;
+    text-shadow: 2px 2px black;
+}
