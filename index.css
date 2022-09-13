@@ -28,6 +28,24 @@ article {
     flex-shrink: 2;
 }
 
+button {
+    font-family: 'Shadows Into Light', 'Gloria Hallelujah', cursive;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px black;
+    color: white;
+    background-color: rgba(144, 136, 136, 0.2);
+    padding: 10px;
+    margin: 50px auto 30px auto;
+    border: none;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: rgba(144, 136, 136, 0.6);
+    transition: 2.5s;
+}
+
 footer {
     text-align: center;
     font-size: 0.7em;
@@ -61,6 +79,34 @@ a:hover {
     flex-grow: 2;
 }
 
-.porte {
+#door1, #door2, #door3 {
     width: 80%;
+}
+
+
+/* Responsive portable _______________________________________________________________*/
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 2.5em;
+    }
+
+    #box_texte {
+        margin: 5px;
+        flex-direction: column-reverse;
+    }
+
+    #img_sorciere {
+        width: 70%;
+        height: 70%;
+    }
+
+    #img_araignee {
+        width: 30%;
+    }
+
+    footer {
+        font-size: 1em;
+        padding-top: 20px;
+    }
 }
