@@ -28,7 +28,7 @@ article {
     flex-shrink: 2;
 }
 
-button {
+#start {
     font-family: 'Shadows Into Light', 'Gloria Hallelujah', cursive;
     font-size: 0.9em;
     letter-spacing: 0.1em;
@@ -36,12 +36,13 @@ button {
     color: white;
     background-color: rgba(144, 136, 136, 0.2);
     padding: 10px;
-    margin: 50px auto 30px auto;
+    margin: 50px 28% 30px 28%;
     border: none;
     border-radius: 10%;
+    
 }
 
-button:hover {
+#start:hover {
     background-color: rgba(144, 136, 136, 0.6);
     transition: 2.5s;
 }
@@ -77,6 +78,10 @@ a:hover {
     width: 50%;
     height: 50%;
     flex-grow: 2;
+}
+
+#doors {
+    display: flex;
 }
 
 #door1, #door2, #door3 {

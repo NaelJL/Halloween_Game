@@ -3,7 +3,7 @@ let doorImage1 = document.getElementById('door1');
 let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
 
-let startButton = document.getElementById('button');
+let startButton = document.getElementById('start');
 
 let broomstickPath = "./images/broomstick.png";
 let froggyPath = "./images/frog.png";
@@ -35,9 +35,9 @@ const isFrog = (door) => {
 
 const gameOver = (status) => {
   if (status === 'win') {
-    button.innerHTML = 'Vous avez échappé à Kaladras, pour cette fois ! Vous retentez votre chance ?';
+    startButton.innerHTML = 'Vous avez échappé à Kaladras, pour cette fois ! Tentez-vous la chance de nouveau ?';
   } else {
-    button.innerHTML = "Kaladras est fort... Très fort... Vous retentez votre chance ?";
+    startButton.innerHTML = "Kaladras est fort... Très fort... Osez-vous retentez votre chance ?";
   }
 
   currentlyPlaying = false;
@@ -60,12 +60,12 @@ const randomFrogDoorGenerator = () => {
         openDoor3 = broomstickPath;
     } else if (froggyDoor === 1) {
         openDoor1 = broomstickPath;
-        openDoor2 = froggyDoor;
+        openDoor2 = froggyPath;
         openDoor3 = broomstickPath;
     } else if (froggyDoor === 2) {
         openDoor1 = broomstickPath;
         openDoor2 = broomstickPath;
-        openDoor3 = froggyDoor;
+        openDoor3 = froggyPath;
     }
 }
 
@@ -90,7 +90,7 @@ doorImage3.onclick = () => {
   }
 }
 
-button.onclick = () => {
+startButton.onclick = () => {
   if (currentlyPlaying === false) {
     startRound();
   }
@@ -102,7 +102,7 @@ const startRound = () => {
     doorImage3.src = closedDoorPath;
     numClosedDoors = 3;
     currentlyPlaying = true;
-    button.innerHTML = 'Bonne chance ! ou... Bon courage';
+    startButton.innerHTML = 'Bonne chance ! ou... Bon courage';
     randomFrogDoorGenerator();
 }
 
