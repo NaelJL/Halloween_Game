@@ -9,7 +9,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Shadows Into Light', 'Gloria Hallelujah', cursive;
-    font-size: 1.8em;
+    font-size: 3.5vh;
     letter-spacing: 0.1em;
     text-shadow: 2px 2px black;
     color: white;
@@ -19,16 +19,16 @@ article {
     display: flex;
 }
 
-#box_texte {
+.box_texte {
     display: flex;
     margin: 20px;
 }
 
-#box1 {
+.box1 {
     flex-shrink: 2;
 }
 
-#start {
+.start {
     font-family: 'Shadows Into Light', 'Gloria Hallelujah', cursive;
     font-size: 0.9em;
     letter-spacing: 0.1em;
@@ -36,13 +36,13 @@ article {
     color: white;
     background-color: rgba(144, 136, 136, 0.2);
     padding: 10px;
-    margin: 50px 28% 30px 28%;
+    margin-left: 20px;
     border: none;
-    border-radius: 10%;
+    border-radius: 2%;
     
 }
 
-#start:hover {
+.start:hover {
     background-color: rgba(144, 136, 136, 0.6);
     transition: 2.5s;
 }
@@ -66,26 +66,35 @@ a {
 a:hover {
     text-shadow: 1px 1px white;
 }
-
+button {
+    background-color: rgba(144, 136, 136, 0);
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+}
 
 /* Images ___________________________________________________________________________*/
 
-#img_araignee {
-    width: 10%;
+.img_araignee {
+    min-width: 135px;
+    width: 10vw;
 }
 
-#img_sorciere {
+.img_sorciere {
     width: 50%;
     height: 50%;
     flex-grow: 2;
 }
 
-#doors {
+.doors {
     display: flex;
+    justify-content: center;
 }
 
-#door1, #door2, #door3 {
-    width: 80%;
+.door1, .door2, .door3 {
+    width: 30vw;
+    max-width: 550px;
 }
 
 

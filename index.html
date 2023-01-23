@@ -3,42 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./index.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
     <title>Haloween Game</title>
   </head>
 
   <body>
     <header>
-      <section id="box_araignee">
-        <img src="./images/spiderV1.png" alt="dessin d'une araignée dans sa toile" id="img_araignee" />
+      <section class="box_araignee">
+        <img src="./images/spiderV1.png" alt="dessin d'une araignée dans sa toile" class="img_araignee" />
       </section>
 
-      <section id="box_texte">
-        <p id="box1">
+      <section class="box_texte">
+        <p class="box1">
           Aidez Griselda la sorcière à retrouver son balai et celui de ses amies. <br /><br />
-          Pendant votre quête, prenez garde à Kalabras, le mage noir ! <br />
+          Pendant votre quête, prenez garde à Kalabras, le mage noir! <br />
           Après la potion ratée de Griselda qui l'a transformé en grenouille, il n'attend qu'une chose...<br />
           Se venger ! <br /><br />
           Ouvrez discrètement les portes et...<br />
           croisez les doigts pour éviter Kalabras...
         </p>
-        <img src="./images/witch.png" alt="dessin d'une sorcière" id="img_sorciere" />
+        <img src="./images/witch.png" alt="dessin d'une sorcière" class="img_sorciere" />
       </section>
     </header>
 
-    <div id="start">Bonne chance ! ou... Bon courage</div>
+    <button class="start" onclick="start()">Bonne chance ! ou... Bon courage</button>
 
-    <div id="doors">
-      <img id="door1" src="./images/door.png" alt="dessin de vieille porte en bois" />
-      <img id="door2" src="./images/door.png" alt="dessin de vieille porte en bois" />
-      <img id="door3" src="./images/door.png" alt="dessin de vieille porte en bois" />
+    <div class="doors" style="display: none">
+      <button><img class="door1" src="images/door.png" alt="dessin de vieille porte en bois" /></button>
+      <button><img class="door2" src="images/door.png" alt="dessin de vieille porte en bois" /></button>
+      <button><img class="door3" src="images/door.png" alt="dessin de vieille porte en bois" /></button>
     </div>
 
     <footer>
       <p>
-        Ce jeu vous a été proposé par <a href="https://github.com/NaelJL" target="_blank">Nael JL</a>, merci d'avoir joué !<br />
+        Ce jeu vous a été proposé par <a href="https://github.com/NaelJL" target="_blank">Nael</a>, merci d'avoir joué !<br />
       </p>
     </footer>
   </body>
   <script type="text/javascript" src="./index.js"></script>
+  <script src="./main.js"></script>
 </html>
