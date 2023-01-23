@@ -14,6 +14,9 @@ let numClosedDoors = 3;
 let closedDoorPath = "images/door.png";
 let broomstickPath = "images/broomstick.png";
 let froggyPath = "images/frog.png";
+let currentImageDoorOne = '';
+let currentImageDoorTwo = '';
+let currentImageDoorThree = '';
 
 function start () {
     imageDoorOne.src = closedDoorPath;
@@ -25,9 +28,9 @@ function start () {
 }
 
 function isClicked (door) {
-    if (door.src === closedDoorPath) {
+    if (door === closedDoorPath) {
       return false;
-    } else if (door.src !== closedDoorPath) {
+    } else if (door !== closedDoorPath) {
       return true;
     } else {
         alert('error with isClicked');
@@ -46,35 +49,36 @@ function gameOver (status) {
 
 function playDoor (door) {
     numClosedDoors--;
-       if (numClosedDoors === 0 && door.src !== froggyPath) {
+       if (numClosedDoors === 0 && door !== froggyPath) {
            gameOver('win');
-        } else if (door.src === froggyPath) {
+        } else if (door === froggyPath) {
             gameOver('loose');
-        } else {
-            alert('error with playDoor');
         }
 }
 
 imageDoorOne.addEventListener('click', () => {
     if (isClicked(imageDoorOne)) {
         let randomNumber = Math.floor(Math.random() * images.length);
-        imageDoorOne.src = images[randomNumber];
-        playDoor(imageDoorOne);
+        currentImageDoorOne = images[randomNumber];
+        imageDoorOne.src = currentImageDoorOne;
+        playDoor(currentImageDoorOne);
     }
 })
 
 imageDoorTwo.addEventListener('click', () => {
     if (isClicked(imageDoorTwo)) {
         let randomNumber = Math.floor(Math.random() * images.length);
-        imageDoorTwo.src = images[randomNumber];
-        playDoor(imageDoorTwo);
+        currentImageDoorTwo = images[randomNumber];
+        imageDoorTwo.src = currentImageDoorTwo;
+        playDoor(currentImageDoorTwo);
     }
 })
 
 imageDoorThree.addEventListener('click', () => {
     if (isClicked(imageDoorThree)) {
         let randomNumber = Math.floor(Math.random() * images.length);
-        imageDoorThree.src = images[randomNumber];
-        playDoor(imageDoorThree);
+        currentImageDoorThree = images[randomNumber];
+        imageDoorThree.src = currentImageDoorThree
+        playDoor(currentImageDoorThree);
     }
 })
