@@ -8,28 +8,18 @@
   </head>
 
   <body>
-    <header>
-      <section class="box_araignee">
-        <img src="./images/spiderV1.png" alt="dessin d'une araignée dans sa toile" class="img_araignee" />
-      </section>
-
-      <section class="box_texte">
-        <p class="box1">
-          Aidez Griselda la sorcière à retrouver son balai et celui de ses amies. <br /><br />
-          Pendant votre quête, prenez garde à Kalabras, le mage noir! <br />
-          Après la potion ratée de Griselda qui l'a transformé en grenouille, il n'attend qu'une chose...<br />
-          Se venger ! <br /><br />
-          Ouvrez discrètement les portes et...<br />
-          croisez les doigts pour éviter Kalabras...
-        </p>
-        <img src="./images/witch.png" alt="dessin d'une sorcière" class="img_sorciere" />
-      </section>
-    </header>
-
-    <button class="start" onclick="start()">
-      Bonne chance ! ou... Bon courage <br />
-      (click ici pour commencer)
-    </button>
+    <section class="box-content">
+      <img src="./images/witch.png" alt="dessin d'une sorcière" class="img_sorciere" />
+      <p class="box-text">
+        Aidez Griselda la sorcière à retrouver son balai et celui de ses amies. <br /><br />
+        Pendant votre quête, prenez garde à Kalabras, le mage noir! <br />
+        Après la potion ratée de Griselda qui l'a transformé en grenouille, il n'attend qu'une chose...<br />
+        Se venger ! <br /><br />
+        Ouvrez discrètement les portes et...<br />
+        croisez les doigts pour éviter Kalabras... <br /><br />
+        <button class="start" onclick="start()">Cliquez ici pour tenter votre chance...</button>
+      </p>
+    </section>
 
     <div class="doors" style="display: none">
       <button><img class="door1" src="images/door.png" alt="dessin de vieille porte en bois" /></button>
@@ -42,7 +32,7 @@
         Ce jeu vous a été proposé par <a href="https://github.com/NaelJL" target="_blank">Nael</a>, merci d'avoir joué !<br />
       </p>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
-  <script type="text/javascript" src="./index.js"></script>
-  <script src="./main.js"></script>
 </html>
