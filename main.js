@@ -17,6 +17,7 @@ let froggyPath = "images/frog.png";
 let currentImageDoorOne = '';
 let currentImageDoorTwo = '';
 let currentImageDoorThree = '';
+let gameInProgress = false;
 
 function start () {
     imageDoorOne.src = closedDoorPath;
@@ -25,6 +26,7 @@ function start () {
     numClosedDoors = 3;
     startButton.innerHTML = 'Bonne chance ! ou... Bon courage';
     doors.style.display = "block";
+    gameInProgress = true;
 }
 
 function isClicked (door) {
@@ -45,6 +47,7 @@ function gameOver (status) {
     } else {
         alert('error with gameOver');
     }
+    gameInProgress = false;
 }
 
 function playDoor (door) {
@@ -57,7 +60,7 @@ function playDoor (door) {
 }
 
 imageDoorOne.addEventListener('click', () => {
-    if (isClicked(imageDoorOne)) {
+    if (gameInProgress && isClicked(imageDoorOne)) {
         let randomNumber = Math.floor(Math.random() * images.length);
         currentImageDoorOne = images[randomNumber];
         imageDoorOne.src = currentImageDoorOne;
@@ -66,7 +69,7 @@ imageDoorOne.addEventListener('click', () => {
 })
 
 imageDoorTwo.addEventListener('click', () => {
-    if (isClicked(imageDoorTwo)) {
+    if (gameInProgress && isClicked(imageDoorTwo)) {
         let randomNumber = Math.floor(Math.random() * images.length);
         currentImageDoorTwo = images[randomNumber];
         imageDoorTwo.src = currentImageDoorTwo;
@@ -75,7 +78,7 @@ imageDoorTwo.addEventListener('click', () => {
 })
 
 imageDoorThree.addEventListener('click', () => {
-    if (isClicked(imageDoorThree)) {
+    if (gameInProgress && isClicked(imageDoorThree)) {
         let randomNumber = Math.floor(Math.random() * images.length);
         currentImageDoorThree = images[randomNumber];
         imageDoorThree.src = currentImageDoorThree
